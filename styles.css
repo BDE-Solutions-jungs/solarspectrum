@@ -94,13 +94,13 @@ body.menu-open .menu-btn .burger span:nth-child(3){transform:translateY(-6px) ro
   transition:clip-path .8s var(--ease-out);
   background:var(--accent)}
 body.menu-open .overlay{pointer-events:auto;clip-path:circle(150% at calc(100% - 90px) 42px)}
-.overlay-inner{height:100%;max-width:var(--maxw);margin:0 auto;padding:120px 36px 48px;
-  display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+.overlay-inner{height:100%;max-width:var(--maxw);margin:0 auto;padding:104px 36px 48px;
+  display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center;overflow-y:auto}
 .overlay-nav{display:flex;flex-direction:column;gap:2px}
 .overlay-link{position:relative;display:flex;align-items:baseline;gap:18px;
-  padding:.04em 0 .18em;color:#0a0b0d;overflow:hidden}
+  padding:.02em 0 .12em;color:#0a0b0d;overflow:hidden}
 .overlay-link .idx{font-family:"JetBrains Mono",monospace;font-size:13px;opacity:.5;width:32px;flex-shrink:0}
-.overlay-link .txt{font-size:clamp(38px,6.4vw,82px);font-weight:500;letter-spacing:-.03em;line-height:1.12;
+.overlay-link .txt{font-size:clamp(30px,min(6.2vw,7.2vh),74px);font-weight:500;letter-spacing:-.03em;line-height:1.12;
   display:inline-block;transform:translateY(120%);transition:transform .7s var(--ease-out);
   transition-delay:var(--d,0s)}
 body.menu-open .overlay-link .txt{transform:translateY(0)}
@@ -607,4 +607,14 @@ footer{background:var(--bg);padding:96px 0 40px;border-top:1px solid var(--line)
   .contact-grid{grid-template-columns:1fr}
   .page-hero{padding:128px 0 60px}
   .contact-card{padding:28px}
+}
+
+/* Overlay menu — short viewport safety (7 links must always fit) */
+@media (max-height:820px){
+  .overlay-inner{align-items:start;padding-top:92px}
+}
+@media (max-height:680px){
+  .overlay-inner{padding-top:84px}
+  .overlay-link .txt{font-size:clamp(24px,5.6vh,40px)}
+  .overlay-foot{display:none}
 }

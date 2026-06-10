@@ -56,11 +56,12 @@ const cio=new IntersectionObserver(ents=>{
   ents.forEach(en=>{
     if(!en.isIntersecting)return;
     const el=en.target,to=+el.dataset.count;cio.unobserve(el);
-    if(reduce){el.textContent=to.toLocaleString('de-DE');return;}
+    const fmt=n=>el.hasAttribute('data-plain')?String(n):n.toLocaleString('de-DE');
+    if(reduce){el.textContent=fmt(to);return;}
     const dur=1400,t0=performance.now();
     (function tick(now){
       const p=Math.min((now-t0)/dur,1),e=1-Math.pow(1-p,3);
-      el.textContent=Math.round(to*e).toLocaleString('de-DE');
+      el.textContent=fmt(Math.round(to*e));
       if(p<1)requestAnimationFrame(tick);
     })(t0);
   });
