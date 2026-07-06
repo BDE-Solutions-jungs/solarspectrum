@@ -3,19 +3,19 @@
    Dark, editorial, dynamic. Brand yellow #fcc600.
    ============================================================ */
 :root{
-  --bg:#0a0b0d;
-  --bg-2:#101216;
-  --bg-3:#15181d;
-  --panel:#16191f;
-  --line:rgba(255,255,255,.08);
-  --line-2:rgba(255,255,255,.16);
-  --ink:#f6f5f2;
-  --ink-2:rgba(246,245,242,.72);
-  --muted:rgba(246,245,242,.46);
+  --bg:#f7f4ee;
+  --bg-2:#eee9df;
+  --bg-3:#e7e1d5;
+  --panel:#ffffff;
+  --line:rgba(18,16,12,.10);
+  --line-2:rgba(18,16,12,.20);
+  --ink:#161310;
+  --ink-2:rgba(22,19,16,.70);
+  --muted:rgba(22,19,16,.48);
   --accent:#fcc600;
   --accent-2:#ffd84d;
   --accent-deep:#e0a800;
-  --good:#3bbd7e;
+  --good:#1f9d63;
   /* light section tokens */
   --cream:#f6f3ec;
   --cream-2:#efe9dd;
@@ -678,3 +678,72 @@ body.menu-open .menu-btn{opacity:0;pointer-events:none}
 .blog-note a{color:var(--accent);font-weight:600}
 @media (max-width:1100px){.blog-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:700px){.blog-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   LIGHT THEME — overrides for off-white background
+   ============================================================ */
+/* Top bar: always light & readable; logo/phone/menu larger and clearer */
+.bar{background:rgba(247,244,238,.82);backdrop-filter:saturate(160%) blur(18px);
+  -webkit-backdrop-filter:saturate(160%) blur(18px);border-bottom:1px solid var(--line)}
+.bar.scrolled{background:rgba(247,244,238,.94);box-shadow:0 8px 26px -20px rgba(0,0,0,.5)}
+.brand img{height:42px;filter:brightness(0)}
+.bar.scrolled .bar-inner{height:64px}
+.bar-phone{font-size:16.5px;font-weight:600;color:var(--ink)}
+.bar-phone .ic{font-size:18px}
+.menu-btn{gap:14px;padding:11px 10px 11px 20px;border:1px solid var(--line-2);border-radius:999px;
+  transition:background .2s,border-color .2s}
+.menu-btn:hover{background:rgba(18,16,12,.05);border-color:var(--ink)}
+.menu-btn .lbl{font-size:14px;color:var(--ink);font-weight:600}
+.menu-btn .burger{width:26px;height:16px}
+.menu-btn .burger span{height:2.5px;width:26px;background:var(--ink)}
+.menu-btn .burger span:nth-child(2){top:7px;width:18px}
+.menu-btn .burger span:nth-child(3){top:14px}
+.menu-btn:hover .burger span:nth-child(2){width:26px}
+.foot-brand img{height:46px;filter:brightness(0)}
+
+/* Hero content sits over the dark drone photo — keep its text light */
+.hero h1{color:#fff}
+.hero-lead{color:rgba(255,255,255,.84)}
+.hero-badge{color:#fff}
+.hero-badge b{color:#fff}
+.avail{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.18)}
+.avail-head h3{color:#fff}
+.avail-form input{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}
+.avail-form input::placeholder{color:rgba(255,255,255,.6)}
+.avail-hint{color:rgba(255,255,255,.64)}
+.avail-hint .dot{background:rgba(255,255,255,.5)}
+
+/* Feature solution card — light accent tint (was a dark panel) */
+.sol.feature{background:linear-gradient(160deg,#fffdf4,#fbf3d6);border-color:rgba(252,198,0,.45)}
+
+/* Calculator results — kept as a dark contrast panel with light text */
+.calc-out{background:radial-gradient(ellipse at top right,#26241f,#141210);color:rgba(255,255,255,.92);
+  border-left-color:rgba(255,255,255,.10)}
+.calc-out .calc-kwp .u,.calc-out .note,.calc-out .calc-r .meta .k,
+.calc-out .calc-r .meta .val small,.calc-out .calc-disc{color:rgba(255,255,255,.55)}
+.calc-out .calc-r{border-bottom-color:rgba(255,255,255,.10)}
+
+/* Reference cards — captions sit over the photo's dark gradient */
+.ref-card .info,.ref-card .city{color:#fff}
+.ref-card .tag{color:#fff;background:rgba(10,11,13,.62)}
+
+/* Review badges need an edge on white cards */
+.rev-g{border:1px solid var(--line-2)}
+.rev-badge{background:var(--ink);color:#fff}
+
+/* Blog category chip sits over a dark thumbnail */
+.blog-cat{color:#fff}
+
+/* Softer toast shadow on light bg */
+.toast{box-shadow:0 24px 60px -24px rgba(0,0,0,.3)}
+
+/* Bigger, clearer dropdown arrows in the menu */
+.overlay-link .sub-arr{font-size:clamp(24px,3.4vh,34px);line-height:1;opacity:.9;transform:translateY(2px)}
+.overlay-group.open .overlay-link.has-sub .sub-arr{transform:translateY(2px) rotate(180deg);opacity:1}
+
+/* Homepage partner strip (replaces the keyword marquee) */
+.partner-strip{padding:44px 0;background:var(--bg-2);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.partner-strip-title{margin:0 0 28px;text-align:center;font-family:"JetBrains Mono",monospace;
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.partner-strip-title b{color:var(--ink);font-weight:600}
