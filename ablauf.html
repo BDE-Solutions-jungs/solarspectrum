@@ -16,7 +16,7 @@
 
 <header class="bar" id="bar">
   <div class="bar-inner">
-    <a class="brand" href="index.html" aria-label="Solar Spectrum"><img src="assets/logo-white.png" alt="Solar Spectrum"></a>
+    <a class="brand" href="index.html" aria-label="Solar Spectrum — zur Startseite"><img src="assets/logo-white.png" alt="Solar Spectrum"></a>
     <div class="bar-right">
       <div class="bar-status"><span class="dot"></span> Verfügbar · Mo–Fr 8–18 Uhr</div>
       <a class="bar-phone" href="tel:061025550100"><span class="ic">☎</span> 06102 / 555 0 100</a>
@@ -29,15 +29,38 @@
 </header>
 
 <div class="overlay" id="overlay">
+  <button class="overlay-close" id="overlayClose" aria-label="Menü schließen">&times;</button>
   <div class="overlay-inner">
     <nav class="overlay-nav">
-      <a class="overlay-link" href="loesungen.html"><span class="idx">01</span><span class="txt" style="--d:0.40s">Lösungen</span></a>
-      <a class="overlay-link" href="solarrechner.html"><span class="idx">02</span><span class="txt" style="--d:0.46s">Solarrechner</span></a>
-      <a class="overlay-link" href="referenzen.html"><span class="idx">03</span><span class="txt" style="--d:0.52s">Referenzen</span></a>
-      <a class="overlay-link" href="bewertungen.html"><span class="idx">04</span><span class="txt" style="--d:0.58s">Bewertungen</span></a>
-      <a class="overlay-link current" href="ablauf.html"><span class="idx">05</span><span class="txt" style="--d:0.64s">Ablauf</span></a>
-      <a class="overlay-link" href="fragen.html"><span class="idx">06</span><span class="txt" style="--d:0.70s">Fragen</span></a>
-      <a class="overlay-link" href="kontakt.html"><span class="idx">07</span><span class="txt" style="--d:0.76s">Kontakt</span></a>
+      <div class="overlay-group">
+        <button class="overlay-link has-sub" data-sub aria-expanded="false"><span class="txt" style="--d:0.40s">Für Haushalte</span><span class="sub-arr" aria-hidden="true">▾</span></button>
+        <div class="overlay-sub">
+          <div class="sub-sec">Lösungen</div>
+          <a href="loesungen.html">Photovoltaik-Anlage<small>Komplett mit oder ohne Speicher</small></a>
+          <a href="loesungen.html">Stromspeicher<small>BYD, GoodWE, Alpha ESS, SMA</small></a>
+          <a href="loesungen.html">Wallbox / Ladestation<small>Für Ihr E-Auto zuhause</small></a>
+          <a href="loesungen.html">Wartung &amp; Service<small>Inspektion &amp; Hotline</small></a>
+          <div class="sub-sec">Tools</div>
+          <a href="solarrechner.html">Solarrechner<small>Anlagengröße &amp; Ersparnis</small></a>
+          <a href="solarrechner.html">Förderrechner<small>Mögliche Zuschüsse</small></a>
+        </div>
+      </div>
+      <div class="overlay-group">
+        <button class="overlay-link has-sub" data-sub aria-expanded="false"><span class="txt" style="--d:0.46s">Für Unternehmen</span><span class="sub-arr" aria-hidden="true">▾</span></button>
+        <div class="overlay-sub">
+          <div class="sub-sec">Lösungen</div>
+          <a href="loesungen.html">Gewerbe-Photovoltaik<small>30 kWp bis 1 MWp · Dach, Fassade, Carport</small></a>
+          <a href="loesungen.html">Gewerbespeicher<small>Lastspitzen kappen, autark werden</small></a>
+          <a href="loesungen.html">Ladeinfrastruktur<small>Wallboxen für Mitarbeiter &amp; Flotten</small></a>
+          <a href="loesungen.html">Energiemanagement<small>Smart EMS, Eigenverbrauch optimieren</small></a>
+          <div class="sub-sec">Tools &amp; Modelle</div>
+          <a href="solarrechner.html">Wirtschaftlichkeitsrechner<small>ROI, Amortisation, AfA</small></a>
+          <a href="kontakt.html">Dachpacht / PPA<small>Auf Anfrage — ohne Eigeninvestition</small></a>
+        </div>
+      </div>
+      <a class="overlay-link" href="referenzen.html"><span class="txt" style="--d:0.52s">Referenzen</span></a>
+      <a class="overlay-link" href="blog.html"><span class="txt" style="--d:0.58s">Blog</span></a>
+      <a class="overlay-link" href="ueber-uns.html"><span class="txt" style="--d:0.64s">Über Uns</span></a>
     </nav>
     <aside class="overlay-aside">
       <div class="grp">
@@ -45,15 +68,15 @@
         <a class="big-phone" href="tel:061025550100">06102 / 555 0 100</a>
       </div>
       <div class="grp">
-        <h6>Für Unternehmen</h6>
-        <a href="loesungen.html">Gewerbe-Photovoltaik</a>
-        <a href="loesungen.html">Ladeinfrastruktur</a>
-        <a href="loesungen.html">Dachpacht / PPA</a>
-      </div>
-      <div class="grp">
         <h6>Standort</h6>
         <p>Frankfurter Str.<br>63263 Neu-Isenburg</p>
         <a href="mailto:info@solar-spectrum.de">info@solar-spectrum.de</a>
+      </div>
+      <div class="grp">
+        <h6>Schnellzugriff</h6>
+        <a href="kontakt.html">Kontakt &amp; Beratung</a>
+        <a href="fragen.html">Häufige Fragen</a>
+        <a href="ablauf.html">Ablauf</a>
       </div>
       <div class="socials">
         <a href="#" aria-label="Instagram">In</a>
@@ -68,6 +91,7 @@
     <span>5,0 ★ · 40+ Google-Bewertungen</span>
   </div>
 </div>
+
 
 <section class="page-hero">
   <div class="shell">
@@ -84,10 +108,10 @@
 <section class="sec" id="process">
   <div class="shell">
     <div class="proc-grid">
-      <div class="proc" data-reveal><div class="stepn">01</div><h4>Kostenlose Beratung</h4><p>Vor Ort, im Büro oder per Video. Wir hören zu und rechnen ehrlich durch.</p><div class="tm">~30 Min · kostenlos</div></div>
-      <div class="proc" data-reveal data-d="1"><div class="stepn">02</div><h4>Festpreis-Angebot</h4><p>Detailliert mit allen Komponenten, Garantien und festem Endpreis.</p><div class="tm">in 7 Tagen</div></div>
-      <div class="proc" data-reveal data-d="2"><div class="stepn">03</div><h4>Montage</h4><p>Unser eigenes Team installiert in 2–5 Tagen. Alles aus einer Hand.</p><div class="tm">2–5 Tage</div></div>
-      <div class="proc" data-reveal data-d="3"><div class="stepn">04</div><h4>Inbetriebnahme</h4><p>Netzanmeldung, Marktstammdatenregister und Förderanträge — wir kümmern uns.</p><div class="tm">wir machen das</div></div>
+      <div class="proc" data-reveal><div class="stepn"></div><h4>Kostenlose Beratung</h4><p>Vor Ort, im Büro oder per Video. Wir hören zu und rechnen ehrlich durch.</p><div class="tm">~30 Min · kostenlos</div></div>
+      <div class="proc" data-reveal data-d="1"><div class="stepn"></div><h4>Festpreis-Angebot</h4><p>Detailliert mit allen Komponenten, Garantien und festem Endpreis.</p><div class="tm">in 7 Tagen</div></div>
+      <div class="proc" data-reveal data-d="2"><div class="stepn"></div><h4>Montage</h4><p>Unser eigenes Team installiert in 2–5 Tagen. Alles aus einer Hand.</p><div class="tm">2–5 Tage</div></div>
+      <div class="proc" data-reveal data-d="3"><div class="stepn"></div><h4>Inbetriebnahme</h4><p>Netzanmeldung, Marktstammdatenregister und Förderanträge — wir kümmern uns.</p><div class="tm">wir machen das</div></div>
     </div>
   </div>
 </section>
@@ -97,9 +121,9 @@
     <div class="intro-grid">
       <p class="intro-statement" data-reveal>Eine Solaranlage ist kein Produkt von der Stange. Sie ist <em>Handwerk</em> — geplant für Ihr Dach, gerechnet für Ihren Verbrauch, gebaut von Menschen, die Sie kennen.</p>
       <div class="intro-side">
-        <div class="item" data-reveal data-d="1"><span class="n">01</span><div><h4>Eigener Meisterbetrieb</h4><p>Ingenieure, Elektromeister, Monteure und Dachdecker — alle bei uns angestellt. Keine wechselnden Subunternehmer.</p></div></div>
-        <div class="item" data-reveal data-d="2"><span class="n">02</span><div><h4>Festpreis, schriftlich</h4><p>Was im Angebot steht, gilt. Keine Nachträge, keine versteckten Kosten nach der Montage.</p></div></div>
-        <div class="item" data-reveal data-d="3"><span class="n">03</span><div><h4>Regional verwurzelt</h4><p>Seit 2009 in Neu-Isenburg. Offizieller Partner der Stadtwerke im Rhein-Main-Gebiet.</p></div></div>
+        <div class="item" data-reveal data-d="1"><div><h4>Eigener Meisterbetrieb</h4><p>Ingenieure, Elektromeister, Monteure und Dachdecker — alle bei uns angestellt. Keine wechselnden Subunternehmer.</p></div></div>
+        <div class="item" data-reveal data-d="2"><div><h4>Festpreis, schriftlich</h4><p>Was im Angebot steht, gilt. Keine Nachträge, keine versteckten Kosten nach der Montage.</p></div></div>
+        <div class="item" data-reveal data-d="3"><div><h4>Regional verwurzelt</h4><p>Seit 2009 in Neu-Isenburg. Offizieller Partner der Stadtwerke im Rhein-Main-Gebiet.</p></div></div>
 
       </div>
     </div>
@@ -137,7 +161,7 @@
       </div>
       <div class="foot-col">
         <h6>Entdecken</h6>
-        <ul><li><a href="referenzen.html">Referenzen</a></li><li><a href="bewertungen.html">Bewertungen</a></li><li><a href="ablauf.html">Ablauf</a></li><li><a href="fragen.html">Häufige Fragen</a></li></ul>
+        <ul><li><a href="referenzen.html">Referenzen</a></li><li><a href="blog.html">Blog</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="bewertungen.html">Bewertungen</a></li><li><a href="ablauf.html">Ablauf</a></li><li><a href="fragen.html">Häufige Fragen</a></li></ul>
       </div>
       <div class="foot-col">
         <h6>Kontakt</h6>

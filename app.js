@@ -30,8 +30,24 @@ function toggleMenu(force){
   if(menuBtn)menuBtn.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');
 }
 if(menuBtn)menuBtn.addEventListener('click',()=>toggleMenu());
-$$('.overlay-aside a').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
+const overlayClose=$('#overlayClose');
+if(overlayClose)overlayClose.addEventListener('click',()=>toggleMenu(false));
+/* close menu on any real navigation (links), but not on the dropdown toggles */
+$$('.overlay-aside a, .overlay-sub a, a.overlay-link').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
 addEventListener('keydown',e=>{if(e.key==='Escape')toggleMenu(false);});
+
+/* ---- Overlay dropdown groups (accordion) ---- */
+$$('.overlay-link.has-sub').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const grp=btn.closest('.overlay-group');
+    const willOpen=!grp.classList.contains('open');
+    $$('.overlay-group.open').forEach(g=>{
+      if(g!==grp){g.classList.remove('open');const b=g.querySelector('.has-sub');if(b)b.setAttribute('aria-expanded','false');}
+    });
+    grp.classList.toggle('open',willOpen);
+    btn.setAttribute('aria-expanded',willOpen);
+  });
+});
 
 /* ---- Magnetic buttons ---- */
 if(!reduce&&!matchMedia('(hover:none)').matches){
