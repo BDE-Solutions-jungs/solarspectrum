@@ -747,3 +747,120 @@ body.menu-open .menu-btn{opacity:0;pointer-events:none}
 .partner-strip-title{margin:0 0 28px;text-align:center;font-family:"JetBrains Mono",monospace;
   font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .partner-strip-title b{color:var(--ink);font-weight:600}
+
+/* ============================================================
+   CALMER MOTION (older audience) — reduce ambient/scroll movement
+   ============================================================ */
+/* Content is visible immediately — no scroll-reveal sliding */
+[data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+/* Hero: no zoom, no word-by-word reveal, no delayed fades */
+.hero-media img{animation:none!important;transform:none!important}
+.hero h1 .word{overflow:visible;padding:0;margin:0}
+.hero h1 .word>span{transform:none!important;animation:none!important}
+.hero-badge,.hero-sub-row,.avail,.hero-full-actions,.hero-full-bullets{animation:none!important;opacity:1!important;transform:none!important}
+/* Stop looping animations: pulses, shimmer, live dots */
+.avail::before{animation:none!important;background:var(--accent)}
+.avail-head .eyb .d,.rev-live .d{animation:none!important}
+/* Gentler hover lifts */
+.sol:hover{transform:translateY(-4px)}
+.rev:hover,.proc:hover,.blog-card:hover,.why-card:hover{transform:translateY(-3px)}
+
+/* Partners: static logo row (no marquee), keep the strip */
+.plogo-track{animation:none!important;flex-wrap:wrap;justify-content:center;gap:16px}
+.plogo-track-wrap{-webkit-mask-image:none;mask-image:none}
+.plogo{width:150px;height:84px}
+
+/* Social pills — visible with real brand logos */
+.overlay-aside .socials{gap:12px}
+.overlay-aside .socials .soc{width:50px;height:50px;border-radius:50%;background:#fff;
+  display:grid;place-items:center;border:0;box-shadow:0 6px 16px -6px rgba(0,0,0,.35);
+  transition:transform .2s var(--ease),box-shadow .2s}
+.overlay-aside .socials .soc:hover{transform:translateY(-3px);box-shadow:0 12px 24px -8px rgba(0,0,0,.4)}
+.overlay-aside .socials .soc svg{width:26px;height:26px;display:block}
+
+/* Bigger menu dropdown arrows */
+.overlay-link .sub-arr{font-size:clamp(30px,4.4vh,46px)!important;line-height:1;opacity:.9;transform:translateY(2px)}
+.overlay-group.open .overlay-link.has-sub .sub-arr{transform:translateY(2px) rotate(180deg)}
+
+/* ============================================================
+   Home tools — compact Solar- & Förderrechner
+   ============================================================ */
+.tools-sec{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.tool-card{background:var(--panel);border:1px solid var(--line);border-radius:24px;
+  padding:34px;display:flex;flex-direction:column;gap:22px}
+.tool-head{display:flex;align-items:center;gap:16px}
+.tool-ic{width:54px;height:54px;border-radius:14px;background:var(--accent);color:#0a0b0d;
+  display:grid;place-items:center;font-size:26px;flex-shrink:0}
+.tool-head h3{margin:0;font-size:23px;font-weight:600;letter-spacing:-.02em}
+.tool-head p{margin:3px 0 0;font-size:14px;color:var(--muted);line-height:1.4}
+.tool-body{display:flex;flex-direction:column;gap:20px}
+.tool-field > label{display:block;font-family:"JetBrains Mono",monospace;font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.tool-res{background:linear-gradient(160deg,#26241f,#141210);border-radius:18px;padding:24px;
+  display:flex;flex-direction:column;gap:14px;color:#fff}
+.tool-res .big{display:flex;align-items:baseline;gap:8px}
+.tool-res .big .v{font-size:clamp(40px,5vw,58px);font-weight:400;letter-spacing:-.03em;line-height:1;
+  font-variant-numeric:tabular-nums}
+.tool-res .big .u{font-size:18px;color:rgba(255,255,255,.55)}
+.tool-res .lab{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);display:block;margin-bottom:6px}
+.tool-res .subrow{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.12);padding-top:14px}
+.tool-res .subrow .k{font-size:11px;color:rgba(255,255,255,.55)}
+.tool-res .subrow .val{font-size:18px;font-weight:500;font-variant-numeric:tabular-nums}
+.tool-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.tool-acts .btn{height:50px;flex:1;min-width:170px;font-size:14.5px}
+.btn-pdf{background:transparent;border:1px solid var(--line-2);color:var(--ink)}
+.btn-pdf:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tool-disc{font-size:11px;color:var(--muted);line-height:1.5}
+
+/* Location select (compact) */
+.loc-select{width:100%;height:48px;padding:0 14px;border-radius:12px;border:1px solid var(--line-2);
+  background:var(--bg-3);color:var(--ink);font:inherit;font-size:15px;font-weight:500}
+
+/* ============================================================
+   Full Förderrechner (dedicated page)
+   ============================================================ */
+.foerder-result{background:linear-gradient(160deg,#26241f,#141210);color:#fff;padding:48px;
+  display:flex;flex-direction:column;border-left:1px solid var(--line)}
+.foerder-result .lab{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent)}
+.foerder-total{display:flex;align-items:baseline;gap:10px;margin:10px 0 4px}
+.foerder-total .v{font-size:clamp(48px,6vw,76px);font-weight:400;letter-spacing:-.035em;line-height:1;
+  font-variant-numeric:tabular-nums}
+.foerder-total .u{font-size:22px;color:rgba(255,255,255,.55)}
+.foerder-result .note{font-size:13px;color:rgba(255,255,255,.55)}
+.foerder-items{display:flex;flex-direction:column;gap:8px;margin-top:22px}
+.foerder-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;
+  padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.foerder-item.off{opacity:.4}
+.foerder-item .fi-name{font-size:14.5px;font-weight:600;display:flex;align-items:center;gap:8px}
+.foerder-item .fi-name .ck{color:var(--good)}
+.foerder-item.off .fi-name .ck{color:rgba(255,255,255,.3)}
+.foerder-item .fi-desc{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px}
+.foerder-item .fi-val{font-size:16px;font-weight:600;text-align:right;flex-shrink:0}
+.foerder-item .fi-type{font-size:10px;color:rgba(255,255,255,.45);font-family:"JetBrains Mono",monospace;
+  letter-spacing:.08em;text-transform:uppercase;text-align:right}
+.foerder-note{font-size:12px;color:rgba(255,255,255,.6);background:rgba(255,255,255,.05);
+  padding:12px 14px;border-radius:10px;line-height:1.5;margin-top:14px;border-left:3px solid var(--accent)}
+.foerder-acts{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.foerder-acts .btn{flex:1;min-width:160px;height:52px}
+.foerder-acts .btn-pdf{border-color:rgba(255,255,255,.25);color:#fff}
+.foerder-acts .btn-pdf:hover{background:#fff;color:#0a0b0d;border-color:#fff}
+.loc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.loc-grid .chip{flex-direction:row;justify-content:center;padding:13px 8px;font-size:14px}
+
+@media (max-width:900px){
+  .tools-grid{grid-template-columns:1fr}
+  .foerder-result{border-left:none;border-top:1px solid var(--line)}
+}
+
+/* ============================================================
+   Print / PDF export
+   ============================================================ */
+#printArea{display:none}
+@media print{
+  body>*{display:none!important}
+  #printArea{display:block!important;padding:0;margin:0}
+  @page{margin:18mm}
+}
