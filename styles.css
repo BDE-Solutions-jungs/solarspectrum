@@ -864,3 +864,16 @@ body.menu-open .menu-btn{opacity:0;pointer-events:none}
   #printArea{display:block!important;padding:0;margin:0}
   @page{margin:18mm}
 }
+
+/* ============================================================
+   Homepage solution cards — showcase photos instead of icons
+   ============================================================ */
+.sol-grid .sol{padding:0;overflow:hidden;min-height:0}
+.sol-img{position:relative;z-index:1;width:100%;aspect-ratio:1/1;overflow:hidden;background:var(--bg-3)}
+.sol-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease)}
+.sol-grid .sol:hover .sol-img img{transform:scale(1.04)}
+.sol-img .num{position:absolute;top:16px;left:16px;margin:0;
+  background:rgba(10,11,13,.68);backdrop-filter:blur(8px);color:#fff;
+  padding:7px 14px;border-radius:999px;font-family:"JetBrains Mono",monospace;
+  font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+.sol-body{position:relative;z-index:1;padding:30px 32px 34px;display:flex;flex-direction:column;gap:14px;flex:1}
