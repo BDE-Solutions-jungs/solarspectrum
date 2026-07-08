@@ -877,3 +877,29 @@ body.menu-open .menu-btn{opacity:0;pointer-events:none}
   padding:7px 14px;border-radius:999px;font-family:"JetBrains Mono",monospace;
   font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
 .sol-body{position:relative;z-index:1;padding:30px 32px 34px;display:flex;flex-direction:column;gap:14px;flex:1}
+
+/* ============================================================
+   Product / solution detail pages
+   ============================================================ */
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.feat-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:28px;
+  display:flex;flex-direction:column;gap:12px;transition:transform .45s var(--ease),border-color .4s}
+.feat-card:hover{transform:translateY(-3px);border-color:var(--line-2)}
+.feat-ic{width:52px;height:52px;border-radius:13px;background:var(--accent);display:grid;place-items:center;
+  font-size:24px;margin-bottom:2px}
+.feat-card h4{margin:0;font-size:18px;font-weight:600;letter-spacing:-.01em}
+.feat-card p{margin:0;font-size:14.5px;line-height:1.6;color:var(--ink-2);flex:1}
+.feat-meta{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--accent-deep);padding-top:12px;border-top:1px solid var(--line);margin-top:2px}
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:16px 40px;list-style:none;margin:0;padding:0}
+.checklist li{display:flex;gap:12px;font-size:15.5px;color:var(--ink-2);line-height:1.5}
+.checklist li .c{color:var(--good);flex-shrink:0;font-weight:700}
+.checklist li b{color:var(--ink);font-weight:600}
+.tbd-note{max-width:640px;margin:0 auto;text-align:center;background:var(--panel);
+  border:1px dashed var(--line-2);border-radius:22px;padding:52px 40px}
+.tbd-note .tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent-deep);background:rgba(252,198,0,.14);padding:6px 13px;
+  border-radius:999px;margin-bottom:18px}
+.tbd-note h3{margin:0 0 10px;font-size:26px;font-weight:600;letter-spacing:-.02em}
+.tbd-note p{margin:0 auto;color:var(--ink-2);font-size:16px;line-height:1.6;max-width:44ch}
+@media(max-width:700px){.checklist{grid-template-columns:1fr}}
