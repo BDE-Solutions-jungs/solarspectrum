@@ -903,3 +903,13 @@ body.menu-open .menu-btn{opacity:0;pointer-events:none}
 .tbd-note h3{margin:0 0 10px;font-size:26px;font-weight:600;letter-spacing:-.02em}
 .tbd-note p{margin:0 auto;color:var(--ink-2);font-size:16px;line-height:1.6;max-width:44ch}
 @media(max-width:700px){.checklist{grid-template-columns:1fr}}
+
+/* Feature cards — photo on top (same style as homepage solution cards) */
+.feat-grid .feat-card{padding:0;overflow:hidden;gap:0}
+.feat-img{width:100%;aspect-ratio:1/1;overflow:hidden;background:var(--bg-3)}
+.feat-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease)}
+.feat-grid .feat-card:hover .feat-img img{transform:scale(1.04)}
+.feat-body{padding:24px 26px 26px;display:flex;flex-direction:column;gap:11px;flex:1}
+
+/* Sharper hero — remove film-grain overlay so the photo stays crisp */
+.hero-grain{display:none!important}
